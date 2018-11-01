@@ -1,1 +1,79 @@
 All Basic Java Programming Code will be here step by step.
+==============================
+// 1. Program: Hello World
+
+public class HelloWorld {
+    
+    public static void main(String[] args) {
+       
+        System.out.println("Hellow World!");      
+    }
+    
+}
+
+===============================
+==============================
+// 2. Program: Take name and age from user and display it.
+
+import java.util.Scanner;
+
+public class HelloWorld {
+    
+    public static void main(String[] args) {
+       
+        Scanner scaner = new Scanner(System.in);  // Reading from System.in
+        System.out.println("Enter Your Name: ");
+        String name = scaner.next();
+        System.out.println("Enter Your Age: ");
+        int age = scaner.nextInt(); // Scans the next token of the input as an int. 
+        scaner.close();//once finished
+        System.out.println("Hi " +name +" you are " + age+ " years old.");
+    }
+    
+}
+
+============================================
+
+// 3. Program: Read, Sum and Find Largest value of an array with for and foreach loop
+
+public class Main {
+      
+    public static void main(String[] args) {
+       
+        String[] foodList = {"Fish","Meat","Milk","Vegetable","Rice"};
+        double totalPrice=0;
+        double[] priceList = {2.5,5.6,14.4,3.25,6.75};
+        
+        //For Each loop to display Array Data
+        System.out.println("Display Foodlist with foreach Loop:");
+        for(String x:foodList){
+            System.out.println(x);
+        }               
+        
+        //For Loop to Display Array Data
+        System.out.println("Display Food Price with For Loop:"); 
+        for(int i=0;i<priceList.length; i++){
+            System.out.println(priceList[i]);
+        }
+                      
+        //Display Total Price of all Food Items 
+        for(int i=0;i<priceList.length; i++){
+            totalPrice += priceList[i];
+        }
+        System.out.println("Total price is : " +totalPrice);
+        
+        //Find the largest price from pricelist array
+        double max = priceList[0];
+        for(int i=0; i<priceList.length; i++){
+            if(priceList[i]>max){
+            max = priceList[i];
+             }
+        }
+        System.out.println("Maximum price is : " +max);
+                
+        
+    }
+       
+}
+
+=======================================
