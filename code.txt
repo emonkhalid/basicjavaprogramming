@@ -1,5 +1,5 @@
 All Basic Java Programming Code will be here step by step.
-==============================
+=========================================================
 // 1. Program: Hello World
 
 public class HelloWorld {
@@ -11,8 +11,7 @@ public class HelloWorld {
     
 }
 
-===============================
-==============================
+==========================================================
 // 2. Program: Take name and age from user and display it.
 
 import java.util.Scanner;
@@ -32,9 +31,68 @@ public class HelloWorld {
     
 }
 
-============================================
+========================================================
+=======================================
+// 3. Program: Simple Example of do while, while and for loop 
 
-// 3. Program: Read, Sum and Find Largest value of an array with for and foreach loop
+
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        //s in a Scanner object to take input from user 
+        Scanner s = new Scanner(System.in);   
+        int choice;
+        //Use of Do While ()loop
+        do{
+            System.out.println("Please Choose Your Favourite Player:");
+            System.out.println("1. Lionel Messi ");
+            System.out.println("2. Cristiano Ronaldo");
+            System.out.println("3. Neymar Jr");
+            choice = s.nextInt();
+        }while((choice !=1) && (choice!=2) && (choice !=3) );
+        
+        //Use of Switch Loop
+        switch(choice){
+            case 1:
+                System.out.println("Lionel Messi plays for Barcelona.");
+                break;
+            case 2:
+                System.out.println("Cristiano Ronaldo plays for Juventus.");
+                break;
+            default:
+                System.out.println("Neymar Jr plays for PSG.");
+                break;
+        }
+        
+        System.out.println();
+        //Use of while loop
+        double load =10700;
+        int months = 0;        
+        while(load>0){
+            load -=500;
+            months +=1;
+        }
+        //System.out.println("If you pay $500 per term then have to "+ months + " terms of payment.");
+        System.out.println("Your Loan $10,700. If you pay $500 per month then you have to carry installment for "+ months + " months" );
+       
+        System.out.println();
+        System.out.println("All Number Between 1 to 10 divided by 3: ");
+        //Use of For Look
+        for(int i=1; i<10; i++){
+            if(i%3==0){
+                System.out.println(i);
+            }
+            
+        }
+           
+    }
+    
+}
+===============================================
+
+// 4. Program: Read, Sum and Find Largest value of an array with for and foreach loop
 
 public class Main {
       
@@ -76,4 +134,3 @@ public class Main {
        
 }
 
-=======================================
